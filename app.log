@@ -1,0 +1,24 @@
+2026-09-14 12:28:20,692 - INFO - File already exists: README.md
+2026-09-14 12:28:20,693 - INFO - File already exists: setup.py
+2026-09-14 12:28:20,693 - INFO - File already exists: template.py
+2026-09-14 12:28:20,693 - INFO - File already exists: logger.py
+2026-09-14 12:28:20,693 - INFO - Created file: src/__init__.py
+2026-09-14 12:28:20,694 - INFO - Created file: src/pipeline/__init__.py
+2026-09-14 12:28:20,694 - INFO - Created file: src/pipeline/config/__init__.py
+2026-09-14 12:28:20,694 - INFO - Created file: src/pipeline/config/configuration_manager.py
+2026-09-14 12:28:20,694 - INFO - Created file: src/pipeline/data_ingestion/__init__.py
+2026-09-14 12:28:20,694 - INFO - Created file: src/pipeline/data_ingestion/data_ingestion.py
+2026-09-14 12:28:20,695 - INFO - Created file: src/pipeline/data_ingestion/data_ingestion_config.py
+2026-09-14 12:28:20,695 - INFO - Created file: src/pipeline/data_preparation/__init__.py
+2026-09-14 12:28:20,695 - INFO - Created file: src/pipeline/data_preparation/data_preparation.py
+2026-09-14 12:28:20,695 - INFO - Created file: src/pipeline/data_preparation/data_preparation_config.py
+2026-09-14 12:28:20,695 - INFO - Created file: src/pipeline/model_trainer/__init__.py
+2026-09-14 12:28:20,695 - INFO - Created file: src/pipeline/model_trainer/model_trainer.py
+2026-09-14 12:28:20,696 - INFO - Created file: src/pipeline/model_trainer/model_trainer_config.py
+2026-09-14 12:28:20,696 - INFO - Created file: src/pipeline/model_evaluation/__init__.py
+2026-09-14 12:28:20,696 - INFO - Created file: src/pipeline/model_evaluation/model_evaluation.py
+2026-09-14 12:28:20,696 - INFO - Created file: config/config.yaml
+2026-09-14 12:28:20,696 - INFO - File already exists: params.yaml
+2026-09-14 15:33:48,088 - INFO - Downloading mlg-ulb/creditcardfraud via kagglehub...
+2026-09-14 15:34:49,760 - INFO - Downloaded to temporary cache: /Users/arpitagrawal/.cache/kagglehub/datasets/mlg-ulb/creditcardfraud/versions/3
+2026-09-14 15:34:50,009 - INFO - Copied raw dataset to: artifacts/data_ingestion/raw/creditcard.csv

@@ -1,0 +1,5 @@
+kagglehub
+scikit-learn
+pandas
+numpy
+streamlit

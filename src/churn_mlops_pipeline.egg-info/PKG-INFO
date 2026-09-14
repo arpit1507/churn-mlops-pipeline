@@ -1,0 +1,29 @@
+Metadata-Version: 2.4
+Name: churn-mlops-pipeline
+Version: 0.1.0
+Summary: A reproducible MLOps pipeline for churn prediction using DVC and GitHub Actions
+Home-page: https://github.com/arpit1507/churn-mlops-pipeline
+Author: Arpit Agrawal
+Author-email: arpitagrawal150701@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: kagglehub
+Requires-Dist: scikit-learn
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: streamlit
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# churn-mlops-pipeline
