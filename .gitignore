@@ -1,0 +1,4 @@
+artifacts/artifacts/data_ingestion/raw/
+*.csv
+artifacts/
+*.log
