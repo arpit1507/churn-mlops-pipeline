@@ -15,6 +15,8 @@ Requires-Dist: scikit-learn
 Requires-Dist: pandas
 Requires-Dist: numpy
 Requires-Dist: streamlit
+Requires-Dist: imbalanced-learn
+Requires-Dist: joblib
 Dynamic: author
 Dynamic: author-email
 Dynamic: classifier

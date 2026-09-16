@@ -1,0 +1,6 @@
+outs:
+- md5: c9e9f3ab0337c86a56c60358dce795dc.dir
+  size: 134207076
+  nfiles: 3
+  hash: md5
+  path: data_preparation

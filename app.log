@@ -22,3 +22,12 @@
 2026-09-14 15:33:48,088 - INFO - Downloading mlg-ulb/creditcardfraud via kagglehub...
 2026-09-14 15:34:49,760 - INFO - Downloaded to temporary cache: /Users/arpitagrawal/.cache/kagglehub/datasets/mlg-ulb/creditcardfraud/versions/3
 2026-09-14 15:34:50,009 - INFO - Copied raw dataset to: artifacts/data_ingestion/raw/creditcard.csv
+2026-09-17 10:53:29,949 - INFO - Starting data preparation...
+2026-09-17 10:54:55,079 - INFO - Starting data preparation...
+2026-09-17 10:54:56,252 - INFO - Transforming cyclical Time features
+2026-09-17 10:54:56,290 - INFO - Executing stratified split with test_size=0.2
+2026-09-17 10:54:56,424 - INFO - Fitting RobustScaler on X_train['Amount']
+2026-09-17 10:54:56,460 - INFO - Saved preprocessor to artifacts/data_preparation/preprocessor.joblib
+2026-09-17 10:54:56,460 - INFO - Applying BorderlineSMOTE resampling to training set only
+2026-09-17 10:54:59,886 - INFO - Successfully saved train ((454902, 32)) and test ((56962, 32)) parquet files.
+2026-09-17 10:54:59,887 - INFO - Data preparation completed.

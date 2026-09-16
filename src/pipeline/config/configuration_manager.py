@@ -34,24 +34,12 @@ class ConfigurationManager:
         Path(cfg["root_dir"]).mkdir(parents=True, exist_ok=True)
 
         return DataPreparationConfig(
+            raw_data_path=Path(cfg["raw_data_path"]),
             root_dir=Path(cfg["root_dir"]),
-            untransformed_data=Path(cfg["untransformed_data"]),
             train_data_path=Path(cfg["train_data_path"]),
             test_data_path=Path(cfg["test_data_path"]),
+            preprocessor_path=Path(cfg["preprocessor_path"]),
             test_size=params["test_size"],
-            random_state=params["random_state"]
-        )
-
-    def get_model_trainer_config(self) -> ModelTrainerConfig:
-        cfg = self.config["model_trainer"]
-        params = self.params["model_trainer"]
-        Path(cfg["root_dir"]).mkdir(parents=True, exist_ok=True)
-
-        return ModelTrainerConfig(
-            root_dir=Path(cfg["root_dir"]),
-            train_data_path=Path(cfg["train_data_path"]),
-            model_name=cfg["model_name"],
-            n_estimators=params["n_estimators"],
-            max_depth=params["max_depth"],
-            random_state=params["random_state"]
+            random_state=params["random_state"],
+            enable_resampling=params["enable_resampling"]
         )
