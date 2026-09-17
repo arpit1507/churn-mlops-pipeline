@@ -19,6 +19,9 @@ src/pipeline/data_preparation/data_preparation.py
 src/pipeline/data_preparation/data_preparation_config.py
 src/pipeline/model_evaluation/__init__.py
 src/pipeline/model_evaluation/model_evaluation.py
-src/pipeline/model_trainer/__init__.py
-src/pipeline/model_trainer/model_trainer.py
-src/pipeline/model_trainer/model_trainer_config.py
+src/pipeline/model_training/__init__.py
+src/pipeline/model_training/model_trainer.py
+src/pipeline/model_training/model_trainer_config.py
+tests/test_config.py
+tests/test_data_validation.py
+tests/test_model.py

@@ -1,2 +1,10 @@
+kagglehub
+scikit-learn
+pandas
+numpy
+streamlit
+xgboost
 imbalanced-learn
 joblib
+dvc[s3]
+pytest

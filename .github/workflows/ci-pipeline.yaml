@@ -1,0 +1,74 @@
+name: MLOps Continuous Integration Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-validate:
+    name: Code Quality & Pipeline Execution
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Check out repository code
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      # 2. Set up Python environment
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.9"
+          cache: "pip"
+
+      # 3. Configure AWS Credentials for DVC
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      # 4. Install Dependencies
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install flake8 pytest
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          pip install -e .
+
+      # 5. Lint code for syntax and formatting errors
+      - name: Lint Code with Flake8
+        run: |
+          # Stop build if there are Python syntax errors or undefined names
+          flake8 src --count --select=E9,F63,F7,F82 --show-source --statistics
+          # Exit-zero treats all errors as warnings
+          flake8 src --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+
+      # Pull DVC Artifacts from AWS S3
+      - name: Pull DVC Artifacts from AWS S3
+        run: |
+          dvc pull
+
+      # Run automated pytest suite
+      - name: Run Test Suite
+        run: |
+          pytest -v tests/
+
+      # 7. Execute the End-to-End Pipeline
+      - name: Run Pipeline Runner
+        run: |
+          python -m src.pipeline.pipeline
+
+      # 8. Check and Validate Generated Metrics
+      - name: Validate Output Metrics
+        run: |
+          if [ -f artifacts/data_training/metrics.json ]; then
+            echo "Pipeline succeeded. Metrics output:"
+            cat artifacts/data_training/metrics.json
+          else
+            echo "Error: metrics.json was not generated!"
+            exit 1
+          fi
