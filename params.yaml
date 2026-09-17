@@ -1,0 +1,4 @@
+data_preparation:
+  test_size: 0.2
+  random_state: 42
+  enable_resampling: true

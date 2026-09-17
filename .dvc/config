@@ -1,7 +1,0 @@
-[core]
-    remote = my_s3_remote
-['remote "my_s3_remote"']
-    url = s3://churn-mlops-dvc-storage-2026/dvc-storage
-    region = us-east-1
-    jobs = 1
-    endpointurl = https://s3.us-east-1.amazonaws.com

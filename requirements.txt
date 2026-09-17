@@ -3,4 +3,6 @@ scikit-learn
 pandas
 numpy
 streamlit
+imbalanced-learn
+joblib
 dvc[s3]

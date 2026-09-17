@@ -19,7 +19,6 @@
 2026-09-14 12:28:20,696 - INFO - Created file: src/pipeline/model_evaluation/model_evaluation.py
 2026-09-14 12:28:20,696 - INFO - Created file: config/config.yaml
 2026-09-14 12:28:20,696 - INFO - File already exists: params.yaml
-
-2026-09-15 13:45:58,320 - INFO - Downloading mlg-ulb/creditcardfraud via kagglehub...
-2026-09-15 13:45:58,836 - INFO - Downloaded to temporary cache: /Users/arpitagrawal/.cache/kagglehub/datasets/mlg-ulb/creditcardfraud/versions/3
-2026-09-15 13:45:59,046 - INFO - Copied raw dataset to: artifacts/data_ingestion/raw/creditcard.csv
+2026-09-14 15:33:48,088 - INFO - Downloading mlg-ulb/creditcardfraud via kagglehub...
+2026-09-14 15:34:49,760 - INFO - Downloaded to temporary cache: /Users/arpitagrawal/.cache/kagglehub/datasets/mlg-ulb/creditcardfraud/versions/3
+2026-09-14 15:34:50,009 - INFO - Copied raw dataset to: artifacts/data_ingestion/raw/creditcard.csv
