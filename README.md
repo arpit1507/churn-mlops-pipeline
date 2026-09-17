@@ -250,5 +250,3 @@ To adjust model hyperparameters or data splitting ratios, modify **`params.yaml`
 
 * **Arpit Agrawal** — MSc Data Science, TU Dortmund
 * GitHub: [@arpit1507](https://www.google.com/search?q=https://github.com/arpit1507)
-
-```
