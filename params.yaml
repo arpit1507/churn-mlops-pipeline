@@ -1,0 +1,6 @@
+model_training:
+  n_estimators: 200
+  max_depth: 5
+  learning_rate: 0.05
+  scale_pos_weight: 1.0   # Set > 1.0 (e.g. 580) if SMOTE was NOT applied in stage 2; set to 1.0 if SMOTE already balanced train.parquet
+  random_state: 42

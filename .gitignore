@@ -1,0 +1,16 @@
+
+# Logs and system files
+*.log
+app.log
+.DS_Store
+
+# Python build / egg-info
+*.egg-info/
+build/
+dist/
+
+# Artifacts - ignore everything inside artifacts except DVC pointer files
+artifacts/**
+!artifacts/**/.gitignore
+!artifacts/**/*.dvc
+!artifacts/*.dvc
