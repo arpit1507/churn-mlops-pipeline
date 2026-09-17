@@ -22,3 +22,36 @@
 2026-09-14 15:33:48,088 - INFO - Downloading mlg-ulb/creditcardfraud via kagglehub...
 2026-09-14 15:34:49,760 - INFO - Downloaded to temporary cache: /Users/arpitagrawal/.cache/kagglehub/datasets/mlg-ulb/creditcardfraud/versions/3
 2026-09-14 15:34:50,009 - INFO - Copied raw dataset to: artifacts/data_ingestion/raw/creditcard.csv
+2026-09-17 17:39:45,489 - INFO - Dataset already present at artifacts/data_ingestion/raw/creditcard.csv. Skipping download.
+2026-09-17 17:39:45,489 - INFO - Raw data downloaded to: artifacts/data_ingestion/raw/creditcard.csv
+2026-09-17 17:40:32,882 - INFO - Dataset already present at artifacts/data_ingestion/raw/creditcard.csv. Skipping download.
+2026-09-17 17:40:32,882 - INFO - Raw data downloaded to: artifacts/data_ingestion/raw/creditcard.csv
+2026-09-17 17:41:52,113 - INFO - Downloading mlg-ulb/creditcardfraud via kagglehub...
+2026-09-17 17:41:52,743 - INFO - Downloaded to temporary cache: /Users/arpitagrawal/.cache/kagglehub/datasets/mlg-ulb/creditcardfraud/versions/3
+2026-09-17 17:41:52,892 - INFO - Copied raw dataset to: artifacts/data_ingestion/raw/creditcard.csv
+2026-09-17 17:41:52,892 - INFO - Raw data downloaded to: artifacts/data_ingestion/raw/creditcard.csv
+2026-09-17 17:42:56,799 - INFO - Dataset already present at artifacts/data_ingestion/raw/creditcard.csv. Skipping download.
+2026-09-17 17:42:56,799 - INFO - Raw data downloaded to: artifacts/data_ingestion/raw/creditcard.csv
+2026-09-17 17:44:19,243 - INFO - Dataset already present at artifacts/data_ingestion/raw/creditcard.csv. Skipping download.
+2026-09-17 17:44:19,243 - INFO - Raw data downloaded to: artifacts/data_ingestion/raw/creditcard.csv
+2026-09-17 17:46:05,128 - INFO - Dataset already present at artifacts/data_ingestion/raw/creditcard.csv. Skipping download.
+2026-09-17 17:46:05,129 - INFO - Raw data downloaded to: artifacts/data_ingestion/raw/creditcard.csv
+2026-09-17 17:46:05,129 - INFO - Starting data preparation...
+2026-09-17 17:46:06,288 - INFO - Transforming cyclical Time features
+2026-09-17 17:46:06,325 - INFO - Executing stratified split with test_size=0.2
+2026-09-17 17:46:06,445 - INFO - Fitting RobustScaler on X_train['Amount']
+2026-09-17 17:46:06,483 - INFO - Saved preprocessor to artifacts/data_preparation/preprocessor.joblib
+2026-09-17 17:46:06,483 - INFO - Applying BorderlineSMOTE resampling to training set only
+2026-09-17 17:46:08,361 - INFO - Successfully saved train ((454902, 32)) and test ((56962, 32)) parquet files.
+2026-09-17 17:46:08,361 - INFO - Data preparation completed.
+2026-09-17 17:47:33,545 - INFO - Dataset already present at artifacts/data_ingestion/raw/creditcard.csv. Skipping download.
+2026-09-17 17:47:33,545 - INFO - Raw data downloaded to: artifacts/data_ingestion/raw/creditcard.csv
+2026-09-17 17:47:33,545 - INFO - Starting data preparation...
+2026-09-17 17:47:34,773 - INFO - Transforming cyclical Time features
+2026-09-17 17:47:34,816 - INFO - Executing stratified split with test_size=0.2
+2026-09-17 17:47:34,937 - INFO - Fitting RobustScaler on X_train['Amount']
+2026-09-17 17:47:34,973 - INFO - Saved preprocessor to artifacts/data_preparation/preprocessor.joblib
+2026-09-17 17:47:34,973 - INFO - Applying BorderlineSMOTE resampling to training set only
+2026-09-17 17:47:36,986 - INFO - Successfully saved train ((454902, 32)) and test ((56962, 32)) parquet files.
+2026-09-17 17:47:36,987 - INFO - Data preparation completed.
+2026-09-17 17:47:37,021 - INFO - Data prepared. Train data at: artifacts/data_preparation/train.parquet, Test data at: artifacts/data_preparation/test.parquet

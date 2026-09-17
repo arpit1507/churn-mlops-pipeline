@@ -1,12 +1,20 @@
+import sys
+from pathlib import Path
+
+# Add project root and 'src' directory to Python search path
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+sys.path.append(str(PROJECT_ROOT / "src"))
+
+# Clean module imports
 from pipeline.logger import logging
+from pipeline.config.configuration_manager import ConfigurationManager
 from pipeline.data_ingestion.data_ingestion import DataIngestion
-from pipeline.data_preparation.data_preparation import DataPreparation
 from pipeline.data_ingestion.data_ingestion_config import DataIngestionConfig
+from pipeline.data_preparation.data_preparation import DataPreparation
 from pipeline.data_preparation.data_preparation_config import DataPreparationConfig
 
 if __name__ == "__main__":
     # Initialize configuration manager
-    from pipeline.config.configuration_manager import ConfigurationManager
     config_manager = ConfigurationManager()
 
     # Data Ingestion
@@ -18,5 +26,5 @@ if __name__ == "__main__":
     # Data Preparation
     data_preparation_config: DataPreparationConfig = config_manager.get_data_preparation_config()
     data_preparation = DataPreparation(config=data_preparation_config)
-    train_data_path, test_data_path = data_preparation.prepare_data(raw_data_path)
+    train_data_path, test_data_path = data_preparation.prepare_data()
     logging.info(f"Data prepared. Train data at: {train_data_path}, Test data at: {test_data_path}")

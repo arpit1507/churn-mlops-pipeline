@@ -65,6 +65,7 @@ class DataPreparation:
         test_df.to_parquet(self.config.test_data_path, index=False)
         logging.info(f"Successfully saved train ({train_df.shape}) and test ({test_df.shape}) parquet files.")
         logging.info("Data preparation completed.")
+        return self.config.train_data_path,self.config.test_data_path
 
 
 if __name__ == "__main__":
