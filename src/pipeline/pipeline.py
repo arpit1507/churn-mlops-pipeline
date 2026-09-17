@@ -12,6 +12,8 @@ from pipeline.data_ingestion.data_ingestion import DataIngestion
 from pipeline.data_ingestion.data_ingestion_config import DataIngestionConfig
 from pipeline.data_preparation.data_preparation import DataPreparation
 from pipeline.data_preparation.data_preparation_config import DataPreparationConfig
+from pipeline.model_training.model_trainer import DataTraining
+from pipeline.model_training.model_trainer_config import DataTrainingConfig
 
 if __name__ == "__main__":
     # Initialize configuration manager
@@ -28,3 +30,9 @@ if __name__ == "__main__":
     data_preparation = DataPreparation(config=data_preparation_config)
     train_data_path, test_data_path = data_preparation.prepare_data()
     logging.info(f"Data prepared. Train data at: {train_data_path}, Test data at: {test_data_path}")
+
+    # Model Training
+    data_training_config: DataTrainingConfig = config_manager.get_data_training_config()
+    data_training = DataTraining(config=data_training_config)
+    data_training.train()
+    

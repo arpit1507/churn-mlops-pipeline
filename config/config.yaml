@@ -11,3 +11,10 @@ data_preparation:
   train_data_path: artifacts/data_preparation/train.parquet
   test_data_path: artifacts/data_preparation/test.parquet
   preprocessor_path: artifacts/data_preparation/preprocessor.joblib
+
+model_training:
+  root_dir: artifacts/data_training
+  train_data_path: artifacts/data_preparation/train.parquet
+  test_data_path: artifacts/data_preparation/test.parquet
+  model_path: artifacts/data_training/model.joblib
+  metrics_path: artifacts/data_training/metrics.json

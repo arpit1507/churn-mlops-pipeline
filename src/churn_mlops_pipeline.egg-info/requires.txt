@@ -1,7 +1,2 @@
-kagglehub
-scikit-learn
-pandas
-numpy
-streamlit
 imbalanced-learn
 joblib

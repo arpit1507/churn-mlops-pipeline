@@ -1,27 +1,3 @@
-2026-09-14 12:28:20,692 - INFO - File already exists: README.md
-2026-09-14 12:28:20,693 - INFO - File already exists: setup.py
-2026-09-14 12:28:20,693 - INFO - File already exists: template.py
-2026-09-14 12:28:20,693 - INFO - File already exists: logger.py
-2026-09-14 12:28:20,693 - INFO - Created file: src/__init__.py
-2026-09-14 12:28:20,694 - INFO - Created file: src/pipeline/__init__.py
-2026-09-14 12:28:20,694 - INFO - Created file: src/pipeline/config/__init__.py
-2026-09-14 12:28:20,694 - INFO - Created file: src/pipeline/config/configuration_manager.py
-2026-09-14 12:28:20,694 - INFO - Created file: src/pipeline/data_ingestion/__init__.py
-2026-09-14 12:28:20,694 - INFO - Created file: src/pipeline/data_ingestion/data_ingestion.py
-2026-09-14 12:28:20,695 - INFO - Created file: src/pipeline/data_ingestion/data_ingestion_config.py
-2026-09-14 12:28:20,695 - INFO - Created file: src/pipeline/data_preparation/__init__.py
-2026-09-14 12:28:20,695 - INFO - Created file: src/pipeline/data_preparation/data_preparation.py
-2026-09-14 12:28:20,695 - INFO - Created file: src/pipeline/data_preparation/data_preparation_config.py
-2026-09-14 12:28:20,695 - INFO - Created file: src/pipeline/model_trainer/__init__.py
-2026-09-14 12:28:20,695 - INFO - Created file: src/pipeline/model_trainer/model_trainer.py
-2026-09-14 12:28:20,696 - INFO - Created file: src/pipeline/model_trainer/model_trainer_config.py
-2026-09-14 12:28:20,696 - INFO - Created file: src/pipeline/model_evaluation/__init__.py
-2026-09-14 12:28:20,696 - INFO - Created file: src/pipeline/model_evaluation/model_evaluation.py
-2026-09-14 12:28:20,696 - INFO - Created file: config/config.yaml
-2026-09-14 12:28:20,696 - INFO - File already exists: params.yaml
-2026-09-14 15:33:48,088 - INFO - Downloading mlg-ulb/creditcardfraud via kagglehub...
-2026-09-14 15:34:49,760 - INFO - Downloaded to temporary cache: /Users/arpitagrawal/.cache/kagglehub/datasets/mlg-ulb/creditcardfraud/versions/3
-2026-09-14 15:34:50,009 - INFO - Copied raw dataset to: artifacts/data_ingestion/raw/creditcard.csv
 2026-09-17 17:39:45,489 - INFO - Dataset already present at artifacts/data_ingestion/raw/creditcard.csv. Skipping download.
 2026-09-17 17:39:45,489 - INFO - Raw data downloaded to: artifacts/data_ingestion/raw/creditcard.csv
 2026-09-17 17:40:32,882 - INFO - Dataset already present at artifacts/data_ingestion/raw/creditcard.csv. Skipping download.
@@ -55,3 +31,19 @@
 2026-09-17 17:47:36,986 - INFO - Successfully saved train ((454902, 32)) and test ((56962, 32)) parquet files.
 2026-09-17 17:47:36,987 - INFO - Data preparation completed.
 2026-09-17 17:47:37,021 - INFO - Data prepared. Train data at: artifacts/data_preparation/train.parquet, Test data at: artifacts/data_preparation/test.parquet
+2026-09-17 17:59:54,536 - INFO - Dataset already present at artifacts/data_ingestion/raw/creditcard.csv. Skipping download.
+2026-09-17 17:59:54,536 - INFO - Raw data downloaded to: artifacts/data_ingestion/raw/creditcard.csv
+2026-09-17 17:59:54,536 - INFO - Starting data preparation...
+2026-09-17 17:59:55,690 - INFO - Transforming cyclical Time features
+2026-09-17 17:59:55,726 - INFO - Executing stratified split with test_size=0.2
+2026-09-17 17:59:55,849 - INFO - Fitting RobustScaler on X_train['Amount']
+2026-09-17 17:59:55,883 - INFO - Saved preprocessor to artifacts/data_preparation/preprocessor.joblib
+2026-09-17 17:59:55,883 - INFO - Applying BorderlineSMOTE resampling to training set only
+2026-09-17 17:59:57,459 - INFO - Successfully saved train ((454902, 32)) and test ((56962, 32)) parquet files.
+2026-09-17 17:59:57,460 - INFO - Data preparation completed.
+2026-09-17 17:59:57,480 - INFO - Data prepared. Train data at: artifacts/data_preparation/train.parquet, Test data at: artifacts/data_preparation/test.parquet
+2026-09-17 17:59:57,481 - INFO - Loading training data from artifacts/data_preparation/train.parquet
+2026-09-17 17:59:57,987 - INFO - Training shapes: X_train=(454902, 31), X_test=(56962, 31)
+2026-09-17 17:59:57,988 - INFO - Fitting model...
+2026-09-17 18:00:01,287 - INFO - Model saved at: artifacts/data_training/model.joblib
+2026-09-17 18:00:01,456 - INFO - Training metrics saved at artifacts/data_training/metrics.json: {'roc_auc': 0.9748784784031789, 'pr_auc': 0.8459004870503066, 'f1_score': 0.7363636363636363}
