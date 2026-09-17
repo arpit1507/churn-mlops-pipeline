@@ -6,3 +6,4 @@ class DataIngestionConfig:
     root_dir: Path
     dataset_handle: str
     raw_data_dir: Path
+
